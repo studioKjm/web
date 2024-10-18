@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타크래프트</title>
+</head>
+<body>
+    <img id="wraith" src="https://cdn.pixabay.com/photo/2023/10/13/17/10/mushroom-8313142_1280.jpg" alt="레이스" width="400">
+    <img id="cloaking"  onclick="hide()" src="https://cdn.pixabay.com/photo/2015/07/18/08/02/button-850101_1280.png" alt="클로킹버튼" width="200">
+    <script>
+        function hide() {
+            let status = document.getElementById("wraith").style.visibility;
+            
+            if(status == '') {
+                document.getElementById("wraith").style.visibility = "hidden";
+            }else if (status == "hidden") {
+                document.getElementById("wraith").style.visibility = "" 
+            }
+            
+        }
+    </script>
+</body>
+</html>
