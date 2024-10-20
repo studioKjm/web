@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김지민의 웹페이지</title>
+</head>
+<body>
+    <h1 id="sound"></h1>
+    <input id="name" type="text"> 
+    <button onclick="getSound()">api 요청</button>
+    <script>
+        function getSound(){
+            const name = document.getElementsById('name').value
+            fetch(`http://localhost:3000/sound/${name}`)
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data)
+                document.getElementsById('sound').innerHTML = data
+            
+            });
+
+
+        }
+    </script>
+</body>
+</html>
